@@ -67,9 +67,7 @@
 			</thead>
 			<tbody>
 			<?php 
-				// $sql = "SELECT * FROM cart";
-				// $result = mysqli_query($conn, $sql);
-
+				
 				if (mysqli_num_rows($select_cart) > 0) {
 					while($row = mysqli_fetch_assoc($select_cart)) {
 				
