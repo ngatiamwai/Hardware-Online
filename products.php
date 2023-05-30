@@ -5,8 +5,6 @@
 	session_cache_limiter(false);
 	session_start();
 
-
-
 	include 'connection.php';
 
 	if (isset($_POST['add_to_cart'])) {
