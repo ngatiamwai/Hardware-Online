@@ -164,8 +164,6 @@
 				move_uploaded_file($temp_name1,"image/$p_image1");
 				move_uploaded_file($temp_name2,"image/$p_image2");
 
-
-
 				$query = "INSERT INTO `product`(`productName`, `productPrice`,`productImage`,`productImage1`,`productImage2`,`sellerID`,`productDescription`,`location`) 
 				VALUES ('$name', '$price','$p_image','$p_image1', '$p_image2', '$sellerID', '$description','$location')";
 
