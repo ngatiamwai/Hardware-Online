@@ -60,8 +60,6 @@ session_start();
                     </div>    
             </form>
         </div>
-
-    </div> 
-    
+    </div>   
 </body>
 </html>
