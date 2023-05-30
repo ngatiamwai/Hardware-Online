@@ -54,7 +54,6 @@ session_start();
                         <i class="fa-solid fa-lock"></i>
                         <input type="password" placeholder="Password" name="password">
                     </div>
-
                     
                     <div class="btn-field">
                         <a href="signup1.php" id="signinBtn"  >Sign Up</a>
