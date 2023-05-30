@@ -13,7 +13,6 @@ if (isset($_REQUEST['signup'])) {
   $password = $_REQUEST['password'];
 
   // Hash password
-  // $password_hash = password_hash($password, PASSWORD_DEFAULT);
   $password = md5($password);
 
   $query = "SELECT * FROM register1 where email='$email'";
