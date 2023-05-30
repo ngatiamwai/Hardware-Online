@@ -1,5 +1,4 @@
 <?php
-
 include 'connection.php';
 
 $error="";
@@ -42,10 +41,8 @@ if (isset($_REQUEST['signup'])) {
         }else{
             $error = "<p>Please Fill all the fields</p>";
         }
-    }
-    
+    }   
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -82,17 +79,11 @@ if (isset($_REQUEST['signup'])) {
                     </div>
                 </div>
             <div class="btn-field">
-            
                 <input type="submit" id="signupBtn" name="signup" value="Sign Up" class="disable">
-                
-            
-                    <a href="adminsignin.php" id="signinBtn"  >Sign In</a>
+                 <a href="adminsignin.php" id="signinBtn"  >Sign In</a>
             </div>
             </form>
         </div>
-
     </div> 
-
-
 </body>
 </html>
