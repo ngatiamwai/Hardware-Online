@@ -149,6 +149,5 @@ button:hover {
 	?>	
 </body>
 <?php include 'footer.php' ?>
-
 </html>
 
