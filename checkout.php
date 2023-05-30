@@ -50,16 +50,12 @@
 			echo "Error: " . $insert_query . "<br>" . mysqli_error($conn);
 		}
 	
-		// Fetch the cart items for the specific user
-		// Fetch the cart items for the specific order
 		$cart_query = mysqli_query($conn, "SELECT * FROM orders WHERE order_id = '$order_id'");
 		$cart_items = mysqli_fetch_all($cart_query, MYSQLI_ASSOC);
 
 		// Loop through the cart items and create an array of product names
-
-
 		// Display the order confirmation message with the cart items
-				echo "
+		echo "
 			<div class='order-confirm-container' >
 				<div class='message-container'>
 					<div class='order-detail'>
