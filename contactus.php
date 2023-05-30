@@ -7,7 +7,6 @@ ini_set('session.cache_limiter','public');
     include 'connection.php';
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
