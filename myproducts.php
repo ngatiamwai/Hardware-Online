@@ -53,9 +53,9 @@
 		if (isset($message)) {
 			foreach ($message as $message) {
 				echo '
-					<div class="message">
-						<span>'.$messge.'<i class="bi bi-x" onclick="this.parentElement.style.display=`none`"></i></span>
-					</div>
+				<div class="message">
+					<span>'.$messge.'<i class="bi bi-x" onclick="this.parentElement.style.display=`none`"></i></span>
+				</div>
 				';
 			}
 		}
@@ -111,9 +111,9 @@
 ?>
 
 
-			</tbody>
-		</table>
-	</section>
+		</tbody>
+	</table>
+</section>
 	<section class="edit-form" style="margin-top: 0; padding-top: 0;">
 		<?php 
 			if (isset($_GET['edit'])) {
