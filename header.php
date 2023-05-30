@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<title>Header</title>
 </head>
 <body>
@@ -14,16 +13,14 @@
 				<a href="products.php">shop</a>
 				<a href="myproducts.php">Sell</a>
 				<a href="aboutus.php">About Us</a>
-				<a href="contactus.php">Contact Us</a>
-        
-
-				<div class="dropdown">
-          <?php if(isset($_SESSION['id'])) { ?>
-            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <?php 
-                $query=mysqli_query($conn,"SELECT register1.firstname FROM `register1` WHERE register1.id = '{$_SESSION['id']}' ");
-                while($row=mysqli_fetch_array($query)) {
-                  echo $row['firstname'];
+				<a href="contactus.php">Contact Us</a>     
+			<div class="dropdown">
+          			<?php if(isset($_SESSION['id'])) { ?>
+           			 <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             		 <?php 
+               			 $query=mysqli_query($conn,"SELECT register1.firstname FROM `register1` WHERE register1.id = '{$_SESSION['id']}' ");
+               			 while($row=mysqli_fetch_array($query)) {
+                 		 echo $row['firstname'];
                 }
               ?>
             </a>
