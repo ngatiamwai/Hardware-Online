@@ -10,7 +10,6 @@
     background-size:cover;
     background-position: center;
     height: 100vh;
-    /* width: 100vh; */
 
 }
 .form-box{
@@ -29,7 +28,6 @@
     margin-bottom: 60px;
     color: olive;
     position: relative;
-    /* padding-top: 10%; */
     
 }
 .form-box h1::after{
@@ -66,9 +64,7 @@ input{
 
 .input-field i{
     margin-left: 15px;
-    color: olive;
-    /* background: #555; */
-    
+    color: olive;    
 }
 form p{
     text-align: left;
