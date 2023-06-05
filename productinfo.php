@@ -227,20 +227,35 @@
 	<h3>Other Products</h3>
 	<div style="display:flex; flex-wrap: wrap;">
 	<?php 
-		$query=mysqli_query($conn,"SELECT product.*, register1.firstname,register1.phonenumber 
-			FROM `product`,`register1` 
-			WHERE product.sellerID=register1.id and product.productID !=id ORDER BY dateAdded DESC");
-			while($row=mysqli_fetch_array($query))
-			{
-	?>
+		if (isset($_GET['selectedProductName'])) {
+		$selectedProductName = $_GET['selectedProductName'];
 	
-		
-		<form method="post" class="card" style="flex-basis:calc(100% / 4)-1px; margin:auto;"onclick="showItemInfo(<?php echo $row['productID']; ?>)">
-			<script>
-				function showItemInfo(id) {
-					window.location.href = "productinfo.php?id=" + id;
-				}
-			</script>
+		// Modify the SQL query to retrieve products with similar names
+		$query = mysqli_query($conn, "SELECT product.*, register1.firstname, register1.phonenumber 
+			FROM `product`, `register1` 
+			WHERE product.sellerID = register1.id 
+				AND product.productID != id 
+				AND product.productName LIKE '%$selectedProductName%' 
+			ORDER BY dateAdded DESC");
+	
+		while ($row = mysqli_fetch_array($query)) {
+			// Your HTML code for displaying the related products
+			?>
+			<form method="post" class="card" style="flex-basis:calc(100% / 4)-1px; margin:auto;" onclick="showItemInfo(<?php echo $row['productID']; ?>)">
+				<script>
+					function showItemInfo(id) {
+						window.location.href = "productinfo.php?id=" + id;
+					}
+				</script>
+				<!-- Display product information here -->
+			</form>
+			<?php
+		}
+	} else {
+		// Handle the case when 'selectedProductName' is not set
+		// You can display an error message or redirect the user to an appropriate page
+	}
+	?>
 		<div class="product-container" >
 				<div class="product-item-container">
 					<div class="box">
